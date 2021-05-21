@@ -1,0 +1,394 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+/************************************************
+                      PHONE
+*************************************************/
+.iphone-x {
+    position: relative;
+    margin: 40px auto;
+    width: 230px;
+    height: 470px;
+    background-color: #7371ee;
+    background-image: linear-gradient(60deg, #7371ee 1%, #a1d9d6 100%);
+    border-radius: 40px;
+    box-shadow: 0px 0px 0px 3px #1f1f1f, 0px 0px 0px 8px #191919, 0px 0px 0px 9px #333;
+    overflow: hidden;
+}
+
+.iphone-x:before,
+.iphone-x:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.iphone-x:after {
+    bottom: 5px;
+    width: 70px;
+    height: 2px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+.iphone-x:before {
+    top: 0px;
+    width: 40%;
+    height: 12px;
+    background-color: #1f1f1f;
+    border-radius: 0px 0px 40px 40px;
+    z-index: 100;
+}
+
+.iphone-x i,
+.iphone-x b,
+.iphone-x s {
+    position: absolute;
+    display: block;
+    color: transparent;
+    z-index: 150;
+}
+
+.iphone-x i {
+    top: -4px;
+    left: 50%;
+    transform: translate(-50%, 6px);
+    height: 3px;
+    width: 14%;
+    background-color: #101010;
+    border-radius: 8px;
+    box-shadow: inset 0px -3px 3px 0px rgba(256, 256, 256, 0.2);
+}
+
+.iphone-x b {
+    right: 80px;
+    top: -2px;
+    transform: scale(0.7);
+    width: 12px;
+    height: 12px;
+    background-color: #101010;
+    border-radius: 12px;
+    box-shadow: inset 0px -3px 2px 0px rgba(256, 256, 256, 0.2);
+}
+
+.iphone-x b:after {
+    content: '';
+    position: absolute;
+    background-color: #2d4d76;
+    width: 6px;
+    height: 6px;
+    top: 2px;
+    left: 2px;
+    top: 3px;
+    left: 3px;
+    display: block;
+    border-radius: 4px;
+    box-shadow: inset 0px -2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.iphone-x s {
+    top: 50px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    font-size: 70px;
+    font-weight: 100;
+    padding-top: 60px;
+}
+
+.iphone-x span {
+    bottom: 50px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    left: 30px;
+}
+
+.iphone-x span+span {
+    left: auto;
+    right: 30px;
+}
+/************************************************
+                      SCREEN
+*************************************************/
+#screen {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: #1d1c1c;
+    overflow-y: scroll;
+    /* cursor: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 512 512'%3e%3cg transform='rotate(45 256 256)'%3e%3crect id='r' x='16' y='216' width='480' height='80' rx='14'/%3e%3cuse href='%23r' transform='rotate(90 256 256)'/%3e%3c/g%3e%3c/svg%3e") 16 16, pointer; */
+    /* cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='27' version='1.1' width='27' style='overflow: hidden; position: relative; top: -0.3125px;'%3E%3Cdesc style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);'%3ECreated with Raphaël 2.0.1%3C/desc%3E%3Cdefs style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);'/%3E%3Ccircle cx='13' cy='13' r='4' fill='%23858585' stroke='%23474747' stroke-width='18' opacity='0.22' style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.8;'/%3E%3C/svg%3E") 27 27, pointer; */
+    cursor: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20pt' height='20pt' viewBox='0 0 50 50' version='1.1'%3E%3Cg id='surface1'%3E%3Cpath style=' stroke:none;fill-rule:nonzero;fill:rgb(58.431373%25,43.137255%25,76.862745%25);fill-opacity:1;' d='M 38.496094 25.628906 C 38.496094 36.027344 30.066406 44.457031 19.667969 44.457031 C 9.269531 44.457031 0.839844 36.027344 0.839844 25.628906 C 0.839844 15.230469 9.269531 6.800781 19.667969 6.800781 C 30.066406 6.800781 38.496094 15.230469 38.496094 25.628906 Z M 38.496094 25.628906 '/%3E%3Cpath style=' stroke:none;fill-rule:nonzero;fill:rgb(71.764706%25,49.803922%25,84.705882%25);fill-opacity:1;' d='M 9.304688 38.007812 C 1.953125 30.652344 1.953125 18.734375 9.304688 11.378906 C 11.121094 9.5625 13.21875 8.199219 15.453125 7.277344 C 12.121094 8.039062 8.953125 9.71875 6.355469 12.316406 C -0.996094 19.667969 -0.996094 31.589844 6.355469 38.941406 C 11.890625 44.476562 20.015625 45.84375 26.832031 43.042969 C 20.726562 44.4375 14.0625 42.761719 9.304688 38.007812 Z M 9.304688 38.007812 '/%3E%3Cpath style=' stroke:none;fill-rule:nonzero;fill:rgb(42.745098%25,17.254902%25,57.254902%25);fill-opacity:1;' d='M 35.492188 15.425781 L 37.316406 13.597656 C 38.101562 12.8125 38.101562 11.539062 37.316406 10.753906 L 34.777344 8.214844 C 33.992188 7.429688 32.71875 7.429688 31.933594 8.214844 L 30.15625 9.992188 C 24.789062 6.382812 17.972656 5.835938 12.164062 8.355469 C 18.269531 6.964844 24.929688 8.644531 29.683594 13.394531 C 37.035156 20.75 37.035156 32.667969 29.683594 40.019531 C 27.957031 41.746094 25.980469 43.066406 23.871094 43.980469 C 27.210938 43.21875 30.378906 41.542969 32.980469 38.941406 C 39.367188 32.554688 40.203125 22.71875 35.492188 15.425781 Z M 35.492188 15.425781 '/%3E%3Cpath style=' stroke:none;fill-rule:nonzero;fill:rgb(71.764706%25,49.803922%25,84.705882%25);fill-opacity:1;' d='M 18.542969 29.699219 C 18.542969 32.851562 15.984375 35.410156 12.832031 35.410156 C 9.675781 35.410156 7.117188 32.851562 7.117188 29.699219 C 7.117188 26.542969 9.675781 23.988281 12.832031 23.988281 C 15.984375 23.988281 18.542969 26.542969 18.542969 29.699219 Z M 18.542969 29.699219 '/%3E%3Cpath style=' stroke:none;fill-rule:nonzero;fill:rgb(10.980392%25,12.54902%25,25.882353%25);fill-opacity:1;' d='M 37.546875 19.75 C 37.117188 19.867188 36.863281 20.316406 36.984375 20.746094 C 37.074219 21.066406 37.152344 21.390625 37.222656 21.714844 C 37.308594 22.09375 37.640625 22.351562 38.015625 22.351562 C 38.070312 22.351562 38.128906 22.34375 38.1875 22.332031 C 38.625 22.234375 38.902344 21.804688 38.804688 21.367188 C 38.730469 21.015625 38.640625 20.660156 38.542969 20.3125 C 38.425781 19.882812 37.976562 19.628906 37.546875 19.75 Z M 37.546875 19.75 '/%3E%3Cpath style=' stroke:none;fill-rule:nonzero;fill:rgb(10.980392%25,12.54902%25,25.882353%25);fill-opacity:1;' d='M 46.558594 13.867188 C 47.292969 12.652344 47.988281 11.503906 47.726562 9.867188 C 47.363281 7.625 45.1875 5.117188 42.167969 4.8125 C 39.617188 4.554688 37.1875 5.898438 35.902344 8.164062 L 35.308594 7.570312 C 34.207031 6.46875 32.417969 6.46875 31.320312 7.570312 L 29.984375 8.902344 C 26.90625 6.984375 23.347656 5.957031 19.628906 5.957031 C 14.382812 5.957031 9.449219 8 5.742188 11.707031 C -1.914062 19.363281 -1.914062 31.820312 5.742188 39.476562 C 9.570312 43.304688 14.597656 45.21875 19.628906 45.21875 C 24.65625 45.21875 29.683594 43.304688 33.511719 39.476562 C 36.3125 36.675781 38.183594 33.144531 38.917969 29.269531 C 39 28.828125 38.714844 28.40625 38.273438 28.320312 C 37.835938 28.238281 37.410156 28.527344 37.328125 28.96875 C 36.652344 32.523438 34.9375 35.761719 32.367188 38.332031 C 25.34375 45.355469 13.910156 45.355469 6.886719 38.332031 C -0.136719 31.308594 -0.136719 19.878906 6.886719 12.851562 C 13.046875 6.691406 22.59375 5.933594 29.585938 10.578125 C 29.605469 10.589844 29.621094 10.605469 29.640625 10.617188 C 30.503906 11.195312 31.316406 11.84375 32.054688 12.546875 C 32.066406 12.5625 32.082031 12.574219 32.09375 12.585938 C 32.1875 12.675781 32.277344 12.761719 32.367188 12.851562 C 32.476562 12.960938 32.585938 13.074219 32.691406 13.1875 C 32.695312 13.191406 32.703125 13.195312 32.707031 13.203125 C 33.457031 13.996094 34.144531 14.871094 34.753906 15.8125 C 34.773438 15.839844 34.792969 15.863281 34.8125 15.890625 C 35.28125 16.621094 35.695312 17.386719 36.054688 18.179688 C 36.238281 18.589844 36.71875 18.769531 37.125 18.585938 C 37.53125 18.402344 37.714844 17.921875 37.53125 17.515625 C 37.214844 16.816406 36.859375 16.136719 36.464844 15.484375 L 37.851562 14.097656 C 38.949219 13 38.949219 11.210938 37.851562 10.113281 L 37.105469 9.367188 C 38.003906 7.4375 39.992188 6.21875 42.007812 6.421875 C 44.21875 6.648438 45.867188 8.519531 46.125 10.125 C 46.296875 11.175781 45.847656 11.914062 45.171875 13.03125 C 44.644531 13.90625 43.988281 14.992188 43.535156 16.488281 C 42.761719 19.019531 42.835938 21.8125 43.746094 24.789062 C 43.851562 25.136719 44.171875 25.359375 44.519531 25.359375 C 44.597656 25.359375 44.679688 25.347656 44.757812 25.324219 C 45.183594 25.191406 45.425781 24.742188 45.292969 24.3125 C 44.476562 21.652344 44.40625 19.175781 45.082031 16.960938 C 45.480469 15.65625 46.054688 14.707031 46.558594 13.867188 Z M 36.703125 12.953125 L 35.554688 14.105469 C 35.09375 13.464844 34.59375 12.855469 34.054688 12.273438 C 34.050781 12.269531 34.050781 12.269531 34.046875 12.265625 C 33.964844 12.175781 33.878906 12.085938 33.796875 11.996094 C 33.703125 11.898438 33.609375 11.804688 33.511719 11.707031 C 33.355469 11.550781 33.191406 11.394531 33.027344 11.242188 C 33.011719 11.222656 32.992188 11.207031 32.972656 11.1875 C 32.449219 10.707031 31.910156 10.253906 31.347656 9.832031 L 32.464844 8.714844 C 32.933594 8.246094 33.695312 8.246094 34.164062 8.714844 L 36.707031 11.257812 C 37.171875 11.722656 37.171875 12.484375 36.703125 12.953125 Z M 36.703125 12.953125 '/%3E%3Cpath style='fill:none;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(100%25,65.882353%25,11.764706%25);stroke-opacity:1;stroke-miterlimit:10;' d='M 442.043814 261.639775 L 411.770123 291.913466 ' transform='matrix(0.0978056,0,0,0.0978056,0,0)'/%3E%3Cpath style='fill:none;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(100%25,65.882353%25,11.764706%25);stroke-opacity:1;stroke-miterlimit:10;' d='M 473.435795 257.566006 L 503.709486 287.839697 ' transform='matrix(0.0978056,0,0,0.0978056,0,0)'/%3E%3Cpath style='fill:none;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(100%25,85.098039%25,17.647059%25);stroke-opacity:1;stroke-miterlimit:10;' d='M 458.378827 266.272688 L 458.378827 309.087195 ' transform='matrix(0.0978056,0,0,0.0978056,0,0)'/%3E%3Cpath style=' stroke:none;fill-rule:nonzero;fill:rgb(100%25,100%25,100%25);fill-opacity:1;' d='M 10.15625 38.691406 C 9.988281 38.691406 9.820312 38.640625 9.675781 38.535156 C 7.386719 36.84375 6.222656 35.152344 5.179688 33.136719 C 4.972656 32.738281 5.128906 32.25 5.527344 32.042969 C 5.921875 31.839844 6.410156 31.992188 6.617188 32.390625 C 7.582031 34.261719 8.59375 35.722656 10.636719 37.230469 C 10.996094 37.496094 11.074219 38.003906 10.808594 38.363281 C 10.648438 38.578125 10.40625 38.691406 10.15625 38.691406 Z M 10.15625 38.691406 '/%3E%3Cpath style=' stroke:none;fill-rule:nonzero;fill:rgb(100%25,100%25,100%25);fill-opacity:1;' d='M 4.972656 31.070312 C 4.621094 31.070312 4.296875 30.839844 4.195312 30.484375 L 4.171875 30.402344 C 4.148438 30.328125 4.148438 30.328125 4.132812 30.253906 L 4.109375 30.171875 C 4.003906 29.738281 4.273438 29.300781 4.707031 29.191406 C 5.140625 29.085938 5.578125 29.355469 5.683594 29.789062 L 5.707031 29.878906 C 5.714844 29.914062 5.714844 29.914062 5.726562 29.949219 L 5.75 30.035156 C 5.875 30.464844 5.625 30.914062 5.195312 31.039062 C 5.121094 31.058594 5.046875 31.070312 4.972656 31.070312 Z M 4.972656 31.070312 '/%3E%3C/g%3E%3C/svg%3E%0A") 50 50, pointer;
+    
+}
+
+#screen::-webkit-scrollbar {
+    width: 0px;
+}
+/* 
+#screen::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+#screen::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 100, 100, .2);
+   
+} 
+*/
+
+#screen *{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+/************************************************
+                      HOME
+*************************************************/
+#home{
+    position: relative;
+    height: 100%;
+    background: #000000;
+    background: -webkit-linear-gradient(100deg, #d1ffff, #3f4c6b);
+    background: linear-gradient(130deg, #ffffff,  #aea9c9, #3c2c83);
+}
+.gatsby-image-wrapper:hover{
+    transform: scale(1.2);
+}
+#notification_bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 0px;
+    padding: 10px 20px 10px 30px;
+    background: rgba(110, 110, 110, 0.4);
+}
+#notification_bar>#clock_time{
+    font-size: 7pt;
+}
+#notification_bar_icons{
+    display: flex;
+    
+}
+#notification_bar_icons>.gatsby-image-wrapper{
+    margin: 0px 2px;
+}
+#notification_bar_icons>.gatsby-image-wrapper:last-of-type{
+    margin-top: -2px;
+}
+
+#clock_time_main{
+    height: 0px;
+    font-size: 30pt;
+    text-align: center;
+}
+#clock_time_date{
+    height: 0px;
+    font-size: 7pt;
+    text-align: center;
+}
+
+#home_main{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px;
+    margin-top: 50px;
+}
+
+
+.all_apps{
+    position: absolute !important;
+    bottom: 60px;
+    left: 43%;
+    border: 2px lightgray dotted;
+    border-radius: 50%;
+    filter: invert(1);
+}
+
+#home_bottom{
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px 5px 15px;
+}
+/************************************************
+                      App Cv
+*************************************************/
+#app_cv{
+    background: white;
+}
+.cv {
+    margin: 20px 0px -10px;
+    color: #001f3f;
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-decoration: underline dashed;
+    text-shadow: 0 10px 15px #2e2e31;
+    z-index: 5;
+}
+
+
+.card {
+    width: 90%;
+    padding: 0px 0px;
+    margin: 25px auto -10px;
+    border-radius: 10px;
+    border: 0px rgba(150, 150, 150, 0.2) solid;
+    box-shadow: -2px -2px 8px -3px gray;
+    overflow: hidden;
+}
+
+.card_header_title {
+    padding: 9px 0px;
+    margin: 0px 0px 0px;
+    color: white;
+    font-size: 11pt;
+    font-weight: 900;
+    text-align: center;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(230, 115, 1, 0.68) 21.4%, rgba(255, 78, 78, 1) 80.3%);
+}
+
+.card_img_wrapper {
+    position: relative;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(230, 115, 1, 1) 21.4%, rgba(255, 78, 78, 1) 80.3%);
+}
+
+.card_img {
+    width: 90%;
+}
+
+.card_badge_wrapper {
+    width: 100%;
+}
+
+.card_badge_space {
+    position: relative;
+    height: 30px;
+    width: 70%;
+    margin: -20px 0px 0px auto;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(230, 115, 1, 1) 21.4%, rgba(255, 78, 78, 1) 80.3%);
+    z-index: 3;
+}
+
+.card_badge_space::after {
+    position: absolute;
+    left: -15px;
+    content: '';
+    height: 0;
+    width: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid rgba(230, 115, 1, 1);
+}
+
+.card_badge_space>p {
+    position: absolute;
+    top: -12px;
+    left: 8px;
+    color: white;
+    font-size: 13pt;
+}
+
+.card_badge_icon {
+    position: absolute;
+    right: 5px;
+    height: 150%;
+}
+
+.card_disc {
+    margin: 5px 0px 10px;
+    border: 2px solid rgba(230, 115, 1, 1);
+    text-align: center;
+    font-size: 10pt;
+}
+
+.screen_body {
+    margin: 30px 0px 0px;
+    padding: 0px 0px 10px;
+    background: #222;
+}
+
+.skills_title {
+    color: white;
+    font-size: 24pt;
+    font-weight: 900;
+    text-align: center;
+}
+
+.skills_title span {
+    animation: light 1s linear infinite;
+}
+
+.skills_title span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.skills_title span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.skills_title span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.skills_title span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.skills_title span:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.skills_title span:nth-child(6) {
+    animation-delay: 0.8s;
+}
+
+@keyframes light {
+
+    0%,
+    80% {
+        color: white;
+        text-shadow: none;
+    }
+
+    100% {
+        color: yellow;
+        text-shadow: 0px 0px 20px white;
+    }
+}
+
+.skills_items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill_item {
+    color: white;
+    padding: 3px 10px;
+    margin: 5px;
+    border: 1px white dashed;
+    font-family: monospace;
+    transition: transform 0.3s ease;
+}
+
+.skill_item:hover {
+    color: black;
+    background: yellow;
+    transform: scale(1.1);
+}
