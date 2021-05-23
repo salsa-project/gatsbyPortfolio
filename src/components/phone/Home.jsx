@@ -1,5 +1,6 @@
+//modules
 import React from "react";
-
+//icons
 import IconBattery from '../../components/images/icon_battery'
 import IconWifi from '../../components/images/icon_SignalWifi'
 import IconSignalCell from '../../components/images/icon_SignalCell'

@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import ScrollBooster from 'scrollbooster';
 //components
 import Home from 'components/phone/Home'
+import App_Cv from 'components/phone/apps/cv/App_Cv'
 
 
 
@@ -14,20 +15,20 @@ const verticalScroll = () => {
       viewport: document.querySelector("#screen"),
       content: document.querySelector("#app_cv"),
       direction: "vertical",
-      scrollMode: "transform"
+      scrollMode: "native"
     });
 };
 
 
 const Screen = (props)=>{
-    let {isAppRunning} = props
+    let {run_app_CV, isScroll} = props
 
-    let [isScroll, setIsScroll] = useState(false)
+    let [openApp, setOpenApp] = useState()
 
     useEffect(()=>{
-        setIsScroll(isAppRunning);
-    }, [isAppRunning])
-
+        (run_app_CV) && setOpenApp(<App_Cv />);
+    }, [run_app_CV])
+    
     useEffect(()=>{
         //active drag scroll
         (isScroll) && verticalScroll();
@@ -36,20 +37,22 @@ const Screen = (props)=>{
     return(
         <div id="screen">
             <Home />
+            <div id="app_runner_layer">
+                {openApp}
+            </div>
         </div>
     )
 }
 
 Screen.propTypes = {
     props: PropTypes.object,
-    isAppRunning: PropTypes.bool,
-    isScroll: PropTypes.bool,
 }
 
 const mapStateToProps = (state, ownProps)=>{
-    let {isAppRunning} = state.app
+    let {run_app_CV, isScroll} = state.app
     return{
-        isAppRunning: isAppRunning,
+        run_app_CV: run_app_CV,
+        isScroll: isScroll
     }
 }
 

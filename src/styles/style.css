@@ -164,6 +164,10 @@ body {
     background: -webkit-linear-gradient(100deg, #d1ffff, #3f4c6b);
     background: linear-gradient(130deg, #ffffff,  #aea9c9, #3c2c83);
 }
+#app_runner_layer{
+    position: absolute; 
+    top: 0px;
+}
 .gatsby-image-wrapper:hover{
     transform: scale(1.2);
 }
@@ -172,8 +176,8 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 0px;
+    width: 100%;
     padding: 10px 20px 10px 30px;
-    background: rgba(110, 110, 110, 0.4);
 }
 #notification_bar>#clock_time{
     font-size: 7pt;
@@ -232,7 +236,8 @@ body {
     background: white;
 }
 .cv {
-    margin: 20px 0px -10px;
+    padding-top: 20px;
+    margin: 0px 0px -10px;
     color: #001f3f;
     font-size: 35px;
     text-align: center;

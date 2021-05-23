@@ -8,7 +8,9 @@ import Img from "gatsby-image"
 
 
 
-const Image = ({ props }) => {
+const Image = (props) => {
+  let {action_run_app_CV} = props
+
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "cv.png" }) {
@@ -19,10 +21,10 @@ const Image = ({ props }) => {
             }
         }
     }`
-)
+  )
 
   function openApp(){
-    console.log('CV app is Running !')
+    action_run_app_CV(true)
   }
 
   return(
@@ -37,17 +39,25 @@ const Image = ({ props }) => {
 
 
 
+
+
 Image.propTypes = {
-    data: PropTypes.object.isRequired,
+  props: PropTypes.object
 }
+
+
 
 
 const mapStateToProps = (state, ownProps)=>{
-  let {isAppRunning} = state.app
+  const {run_app_CV} = state.app;
   return{
-      isAppRunning: isAppRunning,
+    run_app_CV: run_app_CV
+  }
+}
+const mapDispatchToProps = (dispatch)=>{
+  return{
+      action_run_app_CV: (bool)=>{ dispatch({type: 'APP_CV_RUN', run_app_CV: bool})}
   }
 }
 
-export default connect(mapStateToProps, null)(Image)
-
+export default connect(mapStateToProps, mapDispatchToProps)(Image)

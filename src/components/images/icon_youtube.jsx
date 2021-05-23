@@ -28,7 +28,6 @@ const Image = ({ props }) => {
 
 
 Image.propTypes = {
-    data: PropTypes.object.isRequired,
 }
 
 export default Image

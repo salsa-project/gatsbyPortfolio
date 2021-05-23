@@ -5,16 +5,15 @@ import PropTypes from "prop-types";
 //components
 import OwnCard from 'components/phone/apps/cv/components/Own_Card';
 import CvBody from 'components/phone/apps/cv/components/Cv_Body';
-//action
-import {toggleRunApp} from '../../../../state/actions/actions';
+
 
 
 
 
 const AppCv = (props)=>{
-    let {isAppRunning, action_run_app} = props
+    let {action_toggle_scroll} = props
     useEffect(()=>{
-        action_run_app({isAppRunning: true})
+        action_toggle_scroll(true)
     }, [])
     
     return(
@@ -28,21 +27,14 @@ const AppCv = (props)=>{
 
 AppCv.propTypes = {
     props: PropTypes.object,
-    isAppRunning: PropTypes.bool,
-    action_run_app: PropTypes.func,
 };
 
 
-const mapStateToProps = (state, ownProps)=>{
-    const {isAppRunning} = state.app;
-    return{
-        isAppRunning: isAppRunning
-    }
-}
+
 const mapDispatchToProps = (dispatch)=>{
     return{
-        action_run_app: (data)=>{ dispatch(toggleRunApp(data))}
+        action_toggle_scroll: (bool)=> dispatch({type: 'TOGGLE_SCROLL', isScroll: bool})
     }
 }
   
-export default connect(mapStateToProps, mapDispatchToProps)(AppCv)
+export default connect(null, mapDispatchToProps)(AppCv)
